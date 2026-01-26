@@ -1,12 +1,13 @@
 /* Root Variables */
 :root {
-    --primary-color: #4f46e5;
+    --primary-color: #2563eb;
     --secondary-color: #06b6d4;
+    --accent-color: #25D366;
     --dark-color: #0f172a;
     --light-color: #f8fafc;
     --text-color: #1e293b;
     --text-light: #64748b;
-    --gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --gradient: linear-gradient(135deg, #2563eb 0%, #06b6d4 100%);
     --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     --transition: all 0.3s ease;
 }
@@ -115,7 +116,7 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #2563eb 0%, #06b6d4 100%);
     position: relative;
     overflow: hidden;
     padding: 100px 20px 50px;
@@ -331,30 +332,63 @@ section {
 }
 
 /* Services Section */
+.service-category {
+    margin-bottom: 4rem;
+}
+
+.category-title {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.category-desc {
+    text-align: center;
+    color: var(--text-light);
+    margin-bottom: 2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.8;
+}
+
+.category-support {
+    text-align: center;
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, #2563eb15 0%, #06b6d415 100%);
+    border-radius: 10px;
+    color: var(--text-color);
+}
+
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
 }
 
 .service-card {
     background: white;
-    padding: 2rem;
+    padding: 1.8rem;
     border-radius: 15px;
     box-shadow: var(--shadow);
     transition: var(--transition);
     text-align: center;
+    border: 2px solid transparent;
 }
 
 .service-card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-8px);
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    border-color: var(--primary-color);
 }
 
 .service-icon {
-    width: 80px;
-    height: 80px;
-    margin: 0 auto 1.5rem;
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 1.2rem;
     background: var(--gradient);
     border-radius: 50%;
     display: flex;
@@ -363,7 +397,7 @@ section {
 }
 
 .service-icon i {
-    font-size: 2rem;
+    font-size: 1.8rem;
     color: white;
 }
 
@@ -371,6 +405,12 @@ section {
     font-size: 1.5rem;
     margin-bottom: 1rem;
     color: var(--dark-color);
+}
+
+.service-card h4 {
+    font-size: 1.1rem;
+    color: var(--dark-color);
+    line-height: 1.5;
 }
 
 .service-card p {
@@ -454,6 +494,36 @@ section {
 .social-link:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* WhatsApp CTA Button */
+.whatsapp-cta {
+    margin: 2rem 0;
+}
+
+.btn-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 15px 30px;
+    background: #25D366;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: var(--transition);
+    box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
+}
+
+.btn-whatsapp:hover {
+    background: #128C7E;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
+}
+
+.btn-whatsapp i {
+    font-size: 1.5rem;
 }
 
 /* Contact Form */
@@ -629,6 +699,14 @@ section {
 
     .services-grid {
         grid-template-columns: 1fr;
+    }
+
+    .service-category {
+        margin-bottom: 3rem;
+    }
+
+    .category-title {
+        font-size: 1.6rem;
     }
 
     .image-placeholder {
