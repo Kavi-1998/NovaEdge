@@ -54,14 +54,52 @@ html {
     align-items: center;
 }
 
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+}
+
+.logo-name {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--dark-color);
+}
+
+.logo-sub {
+    font-size: 0.85rem;
+    color: var(--text-light);
+    letter-spacing: 0.15rem;
+    text-transform: uppercase;
+}
+
 .logo h1 {
     font-size: 1.8rem;
     color: var(--primary-color);
 }
 
 .logo-img {
-    height: 50px;
+    height: 70px;
     width: auto;
+    transition: var(--transition);
+    filter: drop-shadow(0 2px 8px rgba(37, 99, 235, 0.3));
+}
+
+.logo-img:hover {
+    transform: scale(1.05);
+    filter: drop-shadow(0 4px 12px rgba(37, 99, 235, 0.5));
 }
 
 .logo span {
@@ -595,11 +633,26 @@ section {
     margin-bottom: 1rem;
 }
 
-.footer-logo {
-    height: 60px;
-    width: auto;
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
     margin-bottom: 1rem;
-    filter: brightness(0) invert(1);
+}
+
+.footer-logo {
+    height: 80px;
+    width: auto;
+    margin-bottom: 1.5rem;
+    display: block;
+}
+
+.footer-logo-text .logo-name {
+    color: white;
+}
+
+.footer-logo-text .logo-sub {
+    color: #cbd5e1;
 }
 
 .footer-section span {
