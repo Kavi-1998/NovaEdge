@@ -69,19 +69,21 @@ html {
 .logo-text {
     display: flex;
     flex-direction: column;
-    line-height: 1.1;
+    line-height: 1.05;
+    gap: 2px;
 }
 
 .logo-name {
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: var(--dark-color);
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: var(--primary-color);
+    letter-spacing: 0.02rem;
 }
 
 .logo-sub {
-    font-size: 0.85rem;
-    color: var(--text-light);
-    letter-spacing: 0.15rem;
+    font-size: 0.95rem;
+    color: var(--secondary-color);
+    letter-spacing: 0.18rem;
     text-transform: uppercase;
 }
 
