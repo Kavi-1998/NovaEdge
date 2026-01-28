@@ -74,14 +74,14 @@ html {
 }
 
 .logo-name {
-    font-size: 1.3rem;
+    font-size: 2.2rem;
     font-weight: 800;
     color: var(--primary-color);
     letter-spacing: 0.02rem;
 }
 
 .logo-sub {
-    font-size: 0.95rem;
+    font-size: 1.4rem;
     color: var(--secondary-color);
     letter-spacing: 0.18rem;
     text-transform: uppercase;
@@ -723,6 +723,14 @@ section {
 @media (max-width: 768px) {
     .hamburger {
         display: flex;
+    }
+
+    .logo-name {
+        font-size: 1.6rem;
+    }
+
+    .logo-sub {
+        font-size: 1rem;
     }
 
     .nav-menu {
