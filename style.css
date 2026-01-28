@@ -155,6 +155,164 @@ html {
     transition: var(--transition);
 }
 
+/* Brand Header Section */
+.brand-header {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    padding: 60px 20px;
+    text-align: center;
+    margin-top: 80px;
+    position: relative;
+    overflow: hidden;
+}
+
+.brand-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 20% 50%, rgba(37, 99, 235, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(6, 182, 212, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.header-container {
+    position: relative;
+    z-index: 1;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.brand-title {
+    font-size: 4.5rem;
+    font-weight: 900;
+    margin: 0;
+    line-height: 1.1;
+    letter-spacing: -2px;
+    animation: slideInDown 0.8s ease;
+}
+
+.brand-nova {
+    background: linear-gradient(135deg, #2563eb, #06b6d4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.brand-edge {
+    background: linear-gradient(135deg, #06b6d4, #25D366);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: inline-block;
+}
+
+.brand-subtitle {
+    font-size: 2rem;
+    color: #f8fafc;
+    margin-top: 15px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    animation: fadeInUp 1s ease 0.3s both;
+}
+
+.header-divider {
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #2563eb, #06b6d4, #25D366);
+    margin: 30px auto 0;
+    border-radius: 2px;
+    animation: scaleX 0.8s ease 0.6s both;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .brand-header {
+        padding: 40px 20px;
+        margin-top: 70px;
+    }
+
+    .brand-title {
+        font-size: 2.8rem;
+        letter-spacing: -1px;
+    }
+
+    .brand-nova,
+    .brand-edge {
+        display: block;
+    }
+
+    .brand-nova {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .brand-subtitle {
+        font-size: 1.4rem;
+        letter-spacing: 2px;
+    }
+}
+
+@media (max-width: 480px) {
+    .brand-header {
+        padding: 30px 15px;
+        margin-top: 60px;
+    }
+
+    .brand-title {
+        font-size: 2rem;
+        letter-spacing: -0.5px;
+    }
+
+    .brand-subtitle {
+        font-size: 1rem;
+        letter-spacing: 1.5px;
+        margin-top: 10px;
+    }
+
+    .header-divider {
+        width: 60px;
+        height: 3px;
+        margin-top: 20px;
+    }
+}
+
+/* Animations */
+@keyframes slideInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes scaleX {
+    from {
+        transform: scaleX(0);
+    }
+    to {
+        transform: scaleX(1);
+    }
+}
+
 /* Hero Section */
 .hero {
     min-height: 100vh;
